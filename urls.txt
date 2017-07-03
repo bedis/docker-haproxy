@@ -1,0 +1,1 @@
+http://www.haproxy.org/download/1.7/src/snapshot/haproxy-ss-LATEST.tar.gz

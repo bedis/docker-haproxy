@@ -1,0 +1,13 @@
+HTTP/1.0 200 OK
+Cache-Control: no-cache
+Connection: close
+Content-Type: text/html
+
+<HTML>
+<HEAD>
+<TITLE>Hi!</TITLE>
+</HEAD>
+<BODY>
+<H1>Hi!</H1>
+</BODY>
+</HTML>

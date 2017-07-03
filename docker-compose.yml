@@ -1,0 +1,13 @@
+version: "3"
+services:
+  haproxy:
+    image: lb/haproxy:latest
+    container_name: haproxy
+    environment:
+      DOMLIST: www.example.com mail.example.com
+    volumes:
+      - ./haproxy/conf:/etc/haproxy
+    build:
+      context: .
+      args:
+        HAPROXY_VER: 1.7

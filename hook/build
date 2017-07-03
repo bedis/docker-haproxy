@@ -1,0 +1,2 @@
+#!/bin/bash
+docker build --build-arg HAPROXY_VER=$HAPROXY_VER -t $IMAGE_NAME .

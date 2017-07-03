@@ -1,0 +1,17 @@
+Organization of the configuration
+=================================
+
+It is organized as explained below:
+
+  <conf directory>/
+         ├── common.cfg           : define HAProxy's global, resolvers and defaults section
+         ├── haproxy.cfg          : define main HAProxy frontend
+         ├── svc_svc_haproxy_stats.cfg  : backend for HAProxy statistics
+         ├── svc_letsencrypt.cfg  : backend for letsencrypt service
+         ├── svc_<...>            : add your own services
+         ├── errorfiles
+         |   └── 503-default.http : default page required by the main frontend
+         └── certs
+             └── <...>            : SSL certificates used by HAProxy (pem files)
+
+
