@@ -14,7 +14,7 @@ RUN apk add -U bash socat curl util-linux make gcc libc-dev linux-headers libgcc
 && curl https://get.acme.sh | sh \
 && cd /usr/src \
 && if [ ! -f haproxy-${HAPROXY_VER}.tar.gz ]; then \
-     curl -L -o haproxy-${HAPROXY_VER}.tar.gz http://www.haproxy.org/download/${HAPROXY_VER}/src/snapshot/haproxy-ss-LATEST.tar.gz ; \
+     curl -L -v -o haproxy-${HAPROXY_VER}.tar.gz http://www.haproxy.org/download/${HAPROXY_VER}/src/snapshot/haproxy-ss-LATEST.tar.gz ; \
    fi \
 && tar xzf haproxy-${HAPROXY_VER}.tar.gz \
 && rm -f haproxy-${HAPROXY_VER}.tar.gz \
