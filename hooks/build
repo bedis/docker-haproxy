@@ -1,4 +1,9 @@
 #!/bin/bash
 
 
+# enforcing HAProxy latest branch to the dev branch
+if [ "${CACHE_TIME}" = "latest" ]; then
+  CACHE_TAG=1.8
+fi
+
 docker build --build-arg HAPROXY_VER=$CACHE_TAG -t $IMAGE_NAME .
