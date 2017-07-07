@@ -4,12 +4,12 @@
 #   https://docs.docker.com/docker-cloud/builds/advanced/
 # CACHE_TAG is empty... Or maybe it's not set at build time...
 # this is why I have to setup this marvelous workaround
-if [ -z "${CACHE_TIME}" ]; then
+if [ -z "${CACHE_TAG}" ]; then
   CACHE_TAG=${IMAGE_NAME##*:}
 fi
 
 # enforcing HAProxy latest branch to the dev branch
-if [ "${CACHE_TIME}" = "latest" ]; then
+if [ "${CACHE_TAG}" = "latest" ]; then
   CACHE_TAG=1.8
 fi
 
