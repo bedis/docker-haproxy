@@ -1,2 +1,10 @@
 #!/bin/bash
+
+echo "SOURCE_BRANCH: ${SOURCE_BRANCH};"
+echo "SOURCE_COMMIT: ${SOURCE_COMMIT};"
+echo "COMMIT_MSG: ${COMMIT_MSG};"
+echo "DOCKER_REPO: ${DOCKER_REPO};"
+echo "CACHE_TAG: ${CACHE_TAG};"
+echo "IMAGE_NAME: ${IMAGE_NAME};"
+
 docker build --build-arg HAPROXY_VER=$CACHE_TAG -t $IMAGE_NAME .
